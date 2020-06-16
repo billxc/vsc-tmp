@@ -2,7 +2,7 @@
   "name": "vsc-tmp",
   "displayName": "VSC Temps",
   "description": "Create a tmp file or folder easily",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "publisher": "vsc-tmp",
   "engines": {
     "vscode": "^1.5.0"
