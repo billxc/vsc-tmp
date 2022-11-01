@@ -29,10 +29,8 @@ export function activate(context: vscode.ExtensionContext) {
     // The commandId parameter must match the command field in package.json
     let disposable = vscode.commands.registerCommand('vsc.tmp.file.create', async () => {
         // The code you place here will be executed every time your command is executed
-        const tempdir = resolvePath(
-            vscode.workspace
-                .getConfiguration('vsc.tmp')
-                .get('tmpDir') || os.tmpdir());
+        const config =  vscode.workspace.getConfiguration('vsc.tmp');
+        const tempdir = resolvePath(config.get('tmpDir') || os.tmpdir());
 
         function currentTimeString(): string {
             const current = new Date();
@@ -41,7 +39,7 @@ export function activate(context: vscode.ExtensionContext) {
 
         const fileExtension = await vscode.window.showInputBox({
             prompt: "File extension type",
-            value: "tmp",
+            value: config.get('file.defaultExtension'),
         });
 
         const filepath = `${tempdir}${Path.sep}tmp_${currentTimeString()}.${fileExtension}`;
