@@ -39,7 +39,7 @@ export function activate(context: vscode.ExtensionContext) {
 
         const fileExtension = await vscode.window.showInputBox({
             prompt: "File extension type",
-            value: config.get('file.defaultExtension'),
+            value: config.get('file.defaultExtension') || "tmp",
         });
 
         const filepath = `${tempdir}${Path.sep}tmp_${currentTimeString()}.${fileExtension}`;
