@@ -17,7 +17,8 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:vsc.tmp.file.create"
+    "onCommand:vsc.tmp.file.create",
+    "onCommand:vsc.tmp.file.openCreated"
   ],
   "main": "./out/src/extension",
   "contributes": {
@@ -46,6 +47,10 @@
       {
         "command": "vsc.tmp.file.create",
         "title": "Create a temp file"
+      },
+      {
+        "command": "vsc.tmp.file.openCreated",
+        "title": "Open a recently created temp file"
       }
     ]
   },
