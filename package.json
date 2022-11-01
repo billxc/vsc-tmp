@@ -30,6 +30,11 @@
           "default": false,
           "description": "Delete created temporary files when vscode exits."
         },
+        "vsc.tmp.file.defaultExtension": {
+          "type": "string",
+          "default": "tmp",
+          "description": "Default file extension type for the prompt"
+        },
         "vsc.tmp.tmpDir": {
           "type": "string",
           "default": null,
