@@ -47,12 +47,12 @@
       {
         "command": "vsc.tmp.file.create",
         "title": "Create a temp file",
-        "category": "Create temp"
+        "category": "Vsc-tmp"
       },
       {
         "command": "vsc.tmp.file.openCreated",
         "title": "Open a recently created temp file",
-        "category": "Create temp"
+        "category": "Vsc-tmp"
       }
     ]
   },
