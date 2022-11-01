@@ -59,6 +59,13 @@ export function activate(context: vscode.ExtensionContext) {
     // });
     // context.subscriptions.push(onclose);
     context.subscriptions.push(disposable);
+
+    context.subscriptions.push(
+        vscode.commands.registerCommand("vsc.tmp.file.openCreated", async () => {
+            const filepath = await vscode.window.showQuickPick(created_files);
+            vscode.workspace.openTextDocument(filepath).then(vscode.window.showTextDocument)
+        })
+    );
 }
 
 
