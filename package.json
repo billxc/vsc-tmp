@@ -17,7 +17,8 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:vsc.tmp.file.create"
+    "onCommand:vsc.tmp.file.create",
+    "onCommand:vsc.tmp.file.openCreated"
   ],
   "main": "./out/src/extension",
   "contributes": {
@@ -30,6 +31,11 @@
           "default": false,
           "description": "Delete created temporary files when vscode exits."
         },
+        "vsc.tmp.file.defaultExtension": {
+          "type": "string",
+          "default": "tmp",
+          "description": "Default file extension type for the prompt"
+        },
         "vsc.tmp.tmpDir": {
           "type": "string",
           "default": null,
@@ -40,7 +46,13 @@
     "commands": [
       {
         "command": "vsc.tmp.file.create",
-        "title": "Create a temp file"
+        "title": "Create a temp file",
+        "category": "Vsc-tmp"
+      },
+      {
+        "command": "vsc.tmp.file.openCreated",
+        "title": "Open a recently created temp file",
+        "category": "Vsc-tmp"
       }
     ]
   },
