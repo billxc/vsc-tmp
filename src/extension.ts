@@ -50,14 +50,6 @@ export function activate(context: vscode.ExtensionContext) {
             .then(vscode.window.showTextDocument);
     });
 
-    // let onclose = vscode.workspace.onDidCloseTextDocument(e => {
-    //     console.log(e.fileName);
-    //     console.log(e);
-    //     if (e.lineCount == 0) {
-    //         console.log(e.fileName);
-    //     }
-    // });
-    // context.subscriptions.push(onclose);
     context.subscriptions.push(disposable);
 
     context.subscriptions.push(
