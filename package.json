@@ -2,7 +2,7 @@
   "name": "vsc-tmp",
   "displayName": "VSC Temps",
   "description": "Create a tmp file or folder easily",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "publisher": "vsc-tmp",
   "engines": {
     "vscode": "^1.5.0"
@@ -58,6 +58,7 @@
   },
   "scripts": {
     "vscode:prepublish": "tsc -p ./",
+    "publish": "vsce publish",
     "compile": "tsc -watch -p ./",
     "postinstall": "node ./node_modules/vscode/bin/install",
     "test": "node ./node_modules/vscode/bin/test"
@@ -67,6 +68,7 @@
     "@types/node": "^14.0.13",
     "mocha": "^8.0.1",
     "typescript": "^3.9.5",
-    "vscode": "^1.1.37"
+    "vscode": "^1.1.37",
+    "vsce": "^2.14.0"
   }
 }
